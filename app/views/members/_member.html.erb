@@ -1,0 +1,14 @@
+<%= div_for(member) do %>
+	<div class="comments_wrapper clearfix">
+		<div class="pull-left">
+			<p class="lead"><%= member.rsvp %></p>
+			
+		</div>
+
+		<div class="btn-group pull-right">
+			<% if member.user == current_user -%>
+				<%= link_to 'Quit', member, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-default" %>
+			<% end %>
+		</div>
+	</div>
+<% end %>

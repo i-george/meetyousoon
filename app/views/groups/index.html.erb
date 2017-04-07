@@ -1,0 +1,24 @@
+<% @groups.each do |group| %>
+  <div class="link row clearfix">
+    <h2>
+      <%= link_to group.grpname, group %><br>
+      <small class="author">Submitted <%= time_ago_in_words(group.created_at) %> by <%= group.user.email %></small>
+    </h2>
+  </div>
+
+
+  <div class="btn-group">
+
+      <%= link_to like_group_path(group), method: :put, class: "btn btn-default btn-sm" do %>
+        <span class="glyphicon glyphicon-chevron-up"></span>
+        Upvote
+        <%= group.get_upvotes.size %>
+      <% end %>
+      <%= link_to dislike_group_path(group), method: :put, class: "btn btn-default btn-sm" do %>
+        <span class="glyphicon glyphicon-chevron-down">
+        Downvote
+        <%= group.get_downvotes.size %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

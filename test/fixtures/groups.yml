@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  grpname: MyString
+  grploc: MyString
+  grpcat: MyString
+  grpdesp: MyText
+
+two:
+  grpname: MyString
+  grploc: MyString
+  grpcat: MyString
+  grpdesp: MyText
